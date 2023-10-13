@@ -105,9 +105,9 @@ overflows.subscribe(() => {
     let isLocked = entry.count !== 0
     let willChange = (isLocked && !isHidden) || (!isLocked && isHidden)
 
-    if (willChange) {
-      overflows.dispatch(entry.count > 0 ? 'SCROLL_PREVENT' : 'SCROLL_ALLOW', entry)
-    }
+    // if (willChange) {
+    //   overflows.dispatch(entry.count > 0 ? 'SCROLL_PREVENT' : 'SCROLL_ALLOW', entry)
+    // }
 
     // We have to clean up after ourselves so we don't leak memory
     // Using a WeakMap would be ideal, but it's not iterable
